@@ -1,0 +1,6 @@
+[submodule "chitchat-api"]
+	path = chitchat-api
+	url = https://github.com/nthu-servsec-crypto-delta/chitchat-api
+[submodule "chitchat-app"]
+	path = chitchat-app
+	url = https://github.com/nthu-servsec-crypto-delta/chitchat-app

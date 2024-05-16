@@ -1,0 +1,20 @@
+services:
+  api:
+    build:
+      context: ./chitchat-api/
+      dockerfile: ../api.Dockerfile
+    volumes:
+      - ./chitchat-api/app/db/store/:/app/app/db/store/
+      - ./chitchat-api/config/secrets.yml:/app/config/secrets.yml
+    ports:
+      - 3100:3000
+    environment:
+      - RACK_ENV=development
+  app:
+    build:
+      context: ./chitchat-app/
+      dockerfile: ../app.Dockerfile
+    volumes:
+      - ./chitchat-app/config/app.yml:/app/config/app.yml
+    ports:
+      - 9292:9292
